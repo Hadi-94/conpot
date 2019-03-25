@@ -87,8 +87,8 @@ class S7Server(object):
                 data += sock.recv(length - 4, socket.MSG_WAITALL)
 
                 try:
-                tpkt_packet = TPKT().parse(cleanse_byte_string(data))
-                cotp_base_packet = COTP_BASE_packet().parse(tpkt_packet.payload)
+                    tpkt_packet = TPKT().parse(cleanse_byte_string(data))
+                    cotp_base_packet = COTP_BASE_packet().parse(tpkt_packet.payload)
                 except Exception as e:
                     break
                 
