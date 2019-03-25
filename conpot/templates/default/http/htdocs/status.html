@@ -2,8 +2,6 @@
 
     <HEAD>
         <TITLE>Overview - <condata source="databus" key="SystemDescription" /></TITLE>
-        <!-- <link href="style.css" rel="stylesheet" type="text/css">
-        <link href="function.js" type="text/javascript"></link> -->
     </HEAD>
 
     <BODY>
@@ -11,21 +9,37 @@
         <!-- <img src="./Siemens-logo.svg.png" style="width:150; height:50;"> -->
         <h2><condata source="databus" key="SystemName" /></h2>
         <hr>
+        &nbsp;<br>
 
-        <h2>This page is to monitor and check the system uptime and its elements.</h2>
+        <b>Status:</b><br>
+        &nbsp;<br>
+        <table border="0">
 
-        <h3>Status - System Status</h3>
-        <h3>Information - Elements Status</h3>
+            <tr>
+
+                <td style="width:150px;"><b>Current time:</b></td>
+                <td><condata source="eval" key="time.strftime('%H:%M:%S', time.localtime())" /></td>
+
+            </tr>
+
+            <tr>
+
+                <td style="width:150px;"><b>System uptime:</b></td>
+                <td><condata source="databus" key="Uptime" /> timeticks (deciseconds)</td>
+
+            </tr>
+
+        </table>
 
         <button  id="homeButton" type="button" style="position:absolute; 
-        margin-top:400px; 
-        margin-left:200px; 
+        margin-top:430px; 
+        margin-left:200px;
         height:50px; 
         width:150px; 
         background-color:#c8c3cc; 
         color: white; 
-        border: 1px solid black; 
-        font-family: Times New Roman; 
+        border: 1px solid black;
+        font-family: Times New Roman;
         font-size: 110%;">HOME</button>
 
         <script type="text/javascript">
@@ -35,7 +49,7 @@
         </script>
 
         <button id="statusButton" type="button" style="position:absolute;
-        margin-top:400px; 
+        margin-top:430px; 
         margin-left:600px;
         height:50px;
         width:150px;
@@ -52,7 +66,7 @@
         </script>
 
         <button id="infoButton" type="button" style="position:absolute;
-        margin-top:400px;
+        margin-top:430px;  
         margin-left:1000px;
         height:50px;
         width:150px;

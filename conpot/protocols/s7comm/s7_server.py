@@ -86,8 +86,12 @@ class S7Server(object):
                     break
                 data += sock.recv(length - 4, socket.MSG_WAITALL)
 
+                try:
                 tpkt_packet = TPKT().parse(cleanse_byte_string(data))
                 cotp_base_packet = COTP_BASE_packet().parse(tpkt_packet.payload)
+                except Exception as e:
+                    break
+                
                 if cotp_base_packet.tpdu_type == 0xe0:
 
                     # connection request
