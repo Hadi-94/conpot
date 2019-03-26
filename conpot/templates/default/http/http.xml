@@ -45,7 +45,7 @@
         </node>
         <node name="/status.html">
             <!-- this tarpit will override the globally set tarpit for this node -->
-            <tarpit>0.0;0.3</tarpit>
+            <!-- <tarpit>0.0;0.3</tarpit> -->
             <headers>
                 <entity name="Last-Modified">Tue, 19 May 1993 09:00:00 GMT</entity>
                 <entity name="Content-Type">text/html</entity>
@@ -54,7 +54,7 @@
         </node>
         <node name="/information.html">
             <!-- this tarpit will override the globally set tarpit for this node -->
-            <tarpit>0.0;0.3</tarpit>
+            <!-- <tarpit>0.0;0.3</tarpit> -->
             <headers>
                 <entity name="Last-Modified">Tue, 19 May 1993 09:00:00 GMT</entity>
                 <entity name="Content-Type">text/html</entity>
