@@ -12,7 +12,7 @@ RUN chown conpot:conpot -R /opt/conpot
 # Install Python requirements
 USER conpot
 WORKDIR /opt/conpot
-RUN pip3 install --upgrade pip
+RUN pip3 install --user --upgrade pip
 RUN pip3 install --user --no-cache-dir -U pip==18.1 setuptools
 RUN pip3 install --user --no-cache-dir coverage
 RUN pip3 install --user --no-cache-dir -r requirements.txt
