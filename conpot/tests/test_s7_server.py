@@ -72,9 +72,9 @@ class TestS7Server(unittest.TestCase):
             28: {
                 1: "Technodrome",
                 2: "Siemens, SIMATIC, S7-200",
-                3: "Mouser Factory",
+                3: "Bedok Pumping Station",
                 4: "Original Siemens Equipment",
-                5: "88111222",
+                5: "F1UB42002417",
                 7: "IM151-8 PN/DP CPU",
                 10: "",
                 11: ""
