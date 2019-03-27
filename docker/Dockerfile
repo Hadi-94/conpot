@@ -13,12 +13,14 @@ RUN chown conpot:conpot -R /opt/conpot
 USER conpot
 WORKDIR /opt/conpot
 RUN pip3 install --user --upgrade pip
-RUN pip3 install --user --no-cache-dir -U pip==18.1 setuptools
+RUN pip3 install --user --no-cache-dir -U pip setuptools
 RUN pip3 install --user --no-cache-dir coverage
 RUN pip3 install --user --no-cache-dir -r requirements.txt
+WORKDIR /
 RUN setcap cap_net_bind_service=+ep /usr/bin/python3.6
 
 # Install the Conpot application
+WORKDIR /opt/conpot
 RUN python3 setup.py install --user --prefix=
 
 # Run test cases
