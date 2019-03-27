@@ -17,7 +17,7 @@ RUN pip3 install --user --no-cache-dir -U pip setuptools
 RUN pip3 install --user --no-cache-dir coverage
 RUN pip3 install --user --no-cache-dir -r requirements.txt
 WORKDIR /
-RUN setcap cap_net_bind_service=+ep /usr/bin/python3.6
+RUN setcap cap_net_bind_service=+ep usr/bin/python3.6
 
 # Install the Conpot application
 WORKDIR /opt/conpot
